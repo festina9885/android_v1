@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    자식 뷰들을 등분해서 공간을 차지하게 하는 속성
+    weight 속성 사
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="#125688"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="← Simple Tabs"
+            android:textSize="30dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="3"
+        android:background="#125688"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

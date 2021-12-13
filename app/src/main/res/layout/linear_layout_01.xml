@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    1. 부모가 될 수 있는 뷰 컴포넌트
+    2. 자식만 될 수 있는 뷰 컴포넌트
+    LinerLayout (배치 관리자)
+
+    1 - 1
+    자식 요소들의 배치 방향을 정한다.
+    orientation - vertical ( 수직 방향으로 배치하는 녀석)
+                - horizontal ( 수평 방향으로 배치하는 녀석)
+
+    1 - 2
+    자식 뷰 컴포넌트를 일괄 정렬하는 속성
+    gravity: 배치 정렬
+
+    1 - 3
+    자식 요소 입장에서 부모에 기준으로 어디로 정렬할지 정한다.
+    layout_gravity : 부모 기준으로 정렬 하는 속성
+
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="left"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:text="안녕하세요"
+        android:textStyle="bold"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:text="Hi"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="@color/teal_200"
+        android:layout_width="300dp"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:background="@color/purple_700"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+
+</LinearLayout>
