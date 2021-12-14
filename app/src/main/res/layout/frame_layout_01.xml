@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- FrameLayout 도 자식 뷰들을 가질 수 있다.
+    -->
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:background="@color/purple_200"
+            android:text="Hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:background="@color/purple_700"
+            android:text="Hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:background="@color/purple_500"
+            android:text="Hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <!--
+        Z - INDEX 개념
+    -->
+    <FrameLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@color/purple_200"
+            android:text="Hello" />
+
+        <TextView
+            android:background="@color/purple_700"
+            android:text="Hello"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:background="@color/purple_500"
+            android:text="Hello"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+
+
+
+    </FrameLayout>
+
+</LinearLayout>
