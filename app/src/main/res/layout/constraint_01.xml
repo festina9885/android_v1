@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:text="ANDROID1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- 필요한 만큼 제약 주기 -->
+
+    <TextView
+        android:id="@+id/view2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="66dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="안드로이드2"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 특정뷰 기준으로 제약 주기 -->
+
+
+    <TextView
+        android:id="@+id/view3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="66dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="안드로이드3"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/view2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/view4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="안드로이드4"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/view2"
+        app:layout_constraintRight_toRightOf="@id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <!-- 체인 개념 ***
+        chainStyle - packed, spread, spread-inside
+        bias - 0 ~ 1 ( 0.5 ) 가운데
+        수직, 수평 따로 존재한다.
+
+    -->
+
+
+    <TextView
+        app:layout_constraintVertical_bias="1"
+        android:id="@+id/view5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="안드로이드5"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/view6"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+    <TextView
+
+        android:id="@+id/view6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="안드로이드6"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/view5"
+        app:layout_constraintLeft_toRightOf="@id/view5"
+        app:layout_constraintRight_toLeftOf="@id/view7"
+
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <TextView
+        android:id="@+id/view7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="안드로이드7"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/view5"
+        app:layout_constraintLeft_toRightOf="@id/view6"
+        app:layout_constraintRight_toRightOf="parent"
+
+
+        app:layout_constraintTop_toTopOf="@+id/view6" />
+</androidx.constraintlayout.widget.ConstraintLayout>
